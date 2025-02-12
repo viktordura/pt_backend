@@ -64,11 +64,12 @@ export async function POST(req){
 				data:cart
 			}
 		), { status: 200 });
-	} catch (error) {
+	} catch(error) {
 		return new Response(
 			JSON.stringify({
 				success: false,
-				message: "An error occurred processing the request" 
+				message: "An error occurred processing the request" ,
+				data: error
 			}
 		), { status: 500 });
 	}
